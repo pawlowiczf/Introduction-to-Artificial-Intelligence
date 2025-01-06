@@ -1,0 +1,14 @@
+A route to a destination can be in one of two states: PASSIVE or
+ACTIVE.  These states describe whether the route is guaranteed to be
+both loop free and the shortest available (the PASSIVE state) or
+whether such a guarantee cannot be given (the ACTIVE state).
+Consequently, in PASSIVE state, the router does not perform any route
+recalculation in coordination with its neighbors because no such
+recalculation is needed.
+
+In ACTIVE state, the router is actively involved in re-computing the
+least-cost loop-free path in coordination with its neighbors.  The
+state is reevaluated and possibly changed every time a topology
+change is detected.  A topology change is any event that causes the
+CD to the destination over any neighbor to be added, changed, or
+removed from EIGRP's topology table.
